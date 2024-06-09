@@ -1,0 +1,12 @@
+Locators are tools used to perform executable actions on UI
+
+Types include
+
+1. Id
+2. Class Name
+3. CSS
+4. Xpath
+5. Link Text
+6. Partial Link Text
+
+

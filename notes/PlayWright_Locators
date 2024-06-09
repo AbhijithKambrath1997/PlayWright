@@ -1,0 +1,66 @@
+Locators
+
+1.  TEXT LOCATORS
+     "text={text}"
+     "parent:has-text('{text}')"
+     "SuperParentLocator parent:has-text('{text}')"
+
+2.  FRAME
+     page.frameLocator({frameLocator}).locator({locator})
+     page.frame({frameName}).locator({locator})
+
+3.  IFRAME LOCATOR
+     page.frameLocator("//iframe[contains({frameLocator})]").locator({locator})
+
+4.  SHADOW DOM
+     page.locator({Dom locator} {locator})
+
+5.  SHADOW DOM INSIDE IFRAME
+     page.frameLocator("//iframe[contains({frameLocator})]").locator({Dom locator} {locator})
+
+6.  ELEMENT INSIDE ELEMENT
+     page.locator(parentLocator.has(childLocator))
+
+7.  COMA SEPARATED CSS
+     page.locator(locator1, locator2, locator3, ...)
+     Can be Used when known locator change happens
+
+8.  XPATH UNION
+     page.locator(locator1 | locator2 | locator3 | ...)
+     Can be Used when known locator change happens
+
+9.  RELATIVE CSS SELECTOR
+     page.locator("{locator}:left-of({relativeLocator})")
+     page.locator("{locator}:right-of({relativeLocator})")
+     page.locator("{locator}:above({relativeLocator})")
+     page.locator("{locator}:below({relativeLocator})")
+
+10. NTH ELEMENT
+     page.locator("{locator} >> nth=0")  -> 1st element
+     page.locator("{locator} >> nth=-1") -> last element
+
+11. REACT SELECTORS
+     page.locator("_react={componentName}[{key}={value}]")
+
+12. WINDOW HANDLE
+     Locator table = page.locator({TableLocator})
+     table.locator(":scope") -> gives entire table data
+     table.locator(":scope", new LocatorOptions().) -> gives the functions for testing inside table
+
+13. FILE UPLOAD
+     page.setInputFiles(locator, Path.get("File") -> Upload single file
+     page.setInputFiles(locator, new Path[0]) -> remove uploaded file
+     page.setInputFiles("", new Path[]{Paths.get("File1"), Paths.get("File2")}); -> Multiple file
+     page.setInputFiles("", new FilePayload("FileName", "Type", "Content".getBytes(StandardCharsets.UTF_8))); -> new File
+
+14. FILE DOWNLOAD
+     page.waitForDownload(()->{ page.locator(""); });
+
+15. SCREEN SIZE
+     browser.newContext(new browser.NewContextOptions().setViewportSize(width, height));
+
+16. SCREEN RECORDING
+     browser.newContext(new browser.NewContextOptions().setRecordVideoDir(Paths.get("Path")));
+
+
+

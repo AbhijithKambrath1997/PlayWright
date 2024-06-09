@@ -1,0 +1,9 @@
+1. CODEGEN
+   mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="codegen https://www.gmail.com/"
+
+2. OPTIONS
+    $ -> single element
+    $$ -> List of elements
+    inspect -> element section
+
+

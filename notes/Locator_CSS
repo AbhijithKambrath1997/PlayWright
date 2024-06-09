@@ -1,0 +1,20 @@
+Sample :- <div class="password-container">
+          <input type="password" name="password" id="password">
+          </div>
+
+       :- <a class="bodySmall form-footer" href="/secure/9521/identity/forgot_password">Forgot Password</a>
+
+1. CSS selector with className
+    Locator : tagName.className
+    Example : div.password-container
+
+2. CSS selector with id
+    Locator : tagName#id
+    Example : input#password
+
+3. Sample CSS
+    Locator : tagName[attribute='value']
+    Example : div[class='password-container']
+              input[type='password']
+              input[name='password']
+              input[id='password']

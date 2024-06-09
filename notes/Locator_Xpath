@@ -1,0 +1,17 @@
+1. BASIC XPATH
+     //tagName[@attribute='value']
+     //tagName[contains(@attribute,'value')]
+
+2. MULTIPLE FIELDS
+     //tagName[@attribute1='value1' and @attribute2='value2']
+
+3. LINKS
+     //tagName[text()='value"]
+     //tagName[contains(text(),'value')]
+
+4. PARENT/CHILD
+     parentXpath followed by ChildXpath
+     //tagNameParent[@attributeParent='valueParent']//tagNameChild[@attributeChild='valueChild']
+
+5. PARENT/CHILD/PRECEDING
+     childXpath//parent::parentXpath//preceding-sibling::siblingXpath childXpath
